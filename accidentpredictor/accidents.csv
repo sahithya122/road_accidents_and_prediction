@@ -1,0 +1,11 @@
+Accident_Index,Location_Easting_OSGR,Location_Northing_OSGR,Longitude,Latitude,Police_Force,Accident_Severity,Number_of_Vehicles,Number_of_Casualties,Date,Day_of_Week,Time,Local_Authority_(District),Local_Authority_(Highway),1st_Road_Class,1st_Road_Number,Road_Type,Speed_limit,Junction_Detail,Junction_Control,2nd_Road_Class,2nd_Road_Number,Pedestrian_Crossing-Human_Control,Pedestrian_Crossing-Physical_Facilities,Light_Conditions,Weather_Conditions,Road_Surface_Conditions,Special_Conditions_at_Site,Carriageway_Hazards,Urban_or_Rural_Area,Did_Police_Officer_Attend_Scene_of_Accident,LSOA_of_Accident_Location
+A1,523123,183456,-0.158555,51.523784,1,3,2,1,2023-01-01,1,12:00,12,13,3,101,A,30,41,2,1,,1,1,1,2,1,2,1,1,E01000001
+A2,523124,183457,-0.158556,51.523785,1,2,1,1,2023-01-02,2,13:00,12,13,3,102,B,40,42,3,0,,0,0,2,1,0,2,1,E01000002
+A3,523125,183458,-0.158557,51.523786,2,1,3,2,2023-01-03,3,14:00,14,15,4,103,C,50,43,1,1,,0,1,3,2,1,3,1,E01000003
+A4,523126,183459,-0.158558,51.523787,2,3,2,3,2023-01-04,4,15:00,14,15,4,104,D,60,44,2,0,,0,0,1,1,0,1,1,E01000004
+A5,523127,183460,-0.158559,51.523788,3,2,1,1,2023-01-05,5,16:00,16,17,5,105,E,70,45,3,1,,1,1,2,1,1,2,1,E01000005
+A6,523128,183461,-0.158560,51.523789,3,1,3,2,2023-01-06,6,17:00,16,17,5,106,F,80,46,1,0,,1,0,3,2,0,3,1,E01000006
+A7,523129,183462,-0.158561,51.523790,4,3,2,3,2023-01-07,7,18:00,18,19,1,107,G,30,47,2,1,,1,1,1,1,1,1,1,E01000007
+A8,523130,183463,-0.158562,51.523791,4,2,1,1,2023-01-08,1,19:00,18,19,1,108,H,40,48,3,0,,1,0,2,1,0,2,1,E01000008
+A9,523131,183464,-0.158563,51.523792,5,1,3,2,2023-01-09,2,20:00,20,21,2,109,I,50,49,1,1,,0,1,3,2,1,3,1,E01000009
+A10,523132,183465,-0.158564,51.523793,5,3,2,3,2023-01-10,3,21:00,20,21,2,110,J,60,50,2,0,,0,0,1,1,0,1,1,E01000010

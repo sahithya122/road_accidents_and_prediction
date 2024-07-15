@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Road Accident Prediction and Classification</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://www.policybazaar.com/pblife/assets/images/pb_life_what_to_do_in_case_of_a_car_accident_1598274350.gif');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 800px;
+            width: 100%;
+        }
+        h1, h2, nav, .buttons, .graph-container {
+            text-align: center;
+        }
+        .graph {
+            display: none;
+            width: 100%;
+            max-width: 600px;
+            margin: 10px 0;
+        }
+        .buttons {
+            margin-bottom: 20px;
+        }
+        .buttons button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Road Accident Prediction and Classification</h1>
+    <nav>
+        <a href="/visualization">Visualization</a>
+    </nav>
+    <form action="/predict" method="post">
+        <!-- Existing form fields... -->
+        <label for="Did_Police_Officer_Attend">Did Police Officer Attend Scene of Accident:</label>
+        <select id="Did_Police_Officer_Attend" name="Did_Police_Officer_Attend" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br><br>
+        
+        <label for="age_of_driver">Age of Driver:</label>
+        <input type="number" id="age_of_driver" name="age_of_driver" min="17" max="100" required><br><br>
+        
+        <label for="vehicle_type">Vehicle Type:</label>
+        <select id="vehicle_type" name="vehicle_type" required>
+            <option value="1">Car</option>
+            <option value="2">Motorcycle</option>
+            <option value="3">Bicycle</option>
+            <option value="4">Bus/Coach</option>
+            <option value="5">Goods Vehicle</option>
+        </select><br><br>
+        
+        <label for="age_of_vehicle">Age of Vehicle:</label>
+        <input type="number" id="age_of_vehicle" name="age_of_vehicle" min="0" max="50" required><br><br>
+        
+        <label for="engine_cc">Engine Capacity (CC):</label>
+        <input type="number" id="engine_cc" name="engine_cc" min="50" max="8000" required><br><br>
+        
+        <label for="day">Day of Week:</label>
+        <select id="day" name="day" required>
+            <option value="1">Sunday</option>
+            <option value="2">Monday</option>
+            <option value="3">Tuesday</option>
+            <option value="4">Wednesday</option>
+            <option value="5">Thursday</option>
+            <option value="6">Friday</option>
+            <option value="7">Saturday</option>
+        </select><br><br>
+        
+        <label for="weather">Weather Conditions:</label>
+        <select id="weather" name="weather" required>
+            <option value="1">Fine no high winds</option>
+            <option value="2">Raining no high winds</option>
+            <option value="3">Snowing no high winds</option>
+            <option value="4">Fine + high winds</option>
+            <option value="5">Raining + high winds</option>
+            <option value="6">Snowing + high winds</option>
+            <option value="7">Fog or mist</option>
+            <option value="8">Other</option>
+        </select><br><br>
+        
+        <label for="light">Light Conditions:</label>
+        <select id="light" name="light" required>
+            <option value="1">Daylight</option>
+            <option value="2">Darkness - lights lit</option>
+            <option value="3">Darkness - lights unlit</option>
+            <option value="4">Darkness - no lighting</option>
+            <option value="5">Darkness - lighting unknown</option>
+        </select><br><br>
+        
+        <label for="roadsc">Road Surface Conditions:</label>
+        <select id="roadsc" name="roadsc" required>
+            <option value="1">Dry</option>
+            <option value="2">Wet/Damp</option>
+            <option value="3">Snow</option>
+            <option value="4">Frost/Ice</option>
+            <option value="5">Flood (over 3cm of water)</option>
+            <option value="6">Oil or diesel</option>
+            <option value="7">Mud</option>
+        </select><br><br>
+        
+        <label for="speedl">Speed Limit:</label>
+        <select id="speedl" name="speedl" required>
+            <option value="20">20 mph</option>
+            <option value="30">30 mph</option>
+            <option value="40">40 mph</option>
+            <option value="50">50 mph</option>
+            <option value="60">60 mph</option>
+            <option value="70">70 mph</option>
+        </select><br><br>
+        
+        <button type="submit">Predict</button>
+    </form>
+    
+    {% if output %}
+    <h2>Predicted Severity: {{ output }}</h2>
+    <div class="output-section">
+        <div class="output">{{ prediction_text }}</div>
+    </div>
+    {% endif %}
+</body>
+</html>

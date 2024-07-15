@@ -1,0 +1,11 @@
+Accident_Index,Vehicle_Reference,Casualty_Reference,Casualty_Class,Sex_of_Casualty,Age_of_Casualty,Age_Band_of_Casualty,Casualty_Severity,Pedestrian_Location,Pedestrian_Movement,Car_Passenger,Bus_or_Coach_Passenger,Pedestrian_Road_Maintenance_Worker,Casualty_Type,Casualty_Home_Area_Type
+A1,1,1,1,1,25,6,1,0,0,1,0,0,1,1
+A1,1,2,2,2,35,7,2,1,2,0,1,0,2,2
+A2,1,1,1,1,40,8,2,1,0,0,0,0,3,1
+A2,2,2,2,2,30,7,3,0,0,1,0,0,4,2
+A3,1,1,1,1,20,5,3,0,0,1,0,0,5,1
+A3,2,2,2,2,45,9,1,0,0,1,0,0,6,2
+A4,1,1,1,1,60,10,3,0,0,1,0,0,7,1
+A4,2,2,2,2,55,10,2,1,2,0,1,0,8,2
+A5,1,1,1,1,18,4,1,0,0,1,0,0,9,1
+A5,1,2,2,2,22,5,2,1,1,0,0,0,10,2
